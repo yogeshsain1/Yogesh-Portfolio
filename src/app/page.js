@@ -6,6 +6,9 @@ import Navbar from "@/components/navbar/navbar";
 import { Roboto } from "next/font/google";
 import Home1 from "@/components/homedesign1/home";
 import Dot from "@/components/dot_line";
+import { motion, AnimatePresence } from "framer-motion"; 
+
+
 const greetings = ["Hello", "Olá", "Ciao", "Konnichiwa", "Annyeonghaseyo", "Nǐ hǎo", "नमस्ते"];
 
 export default function Home() {
@@ -14,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
 
-      if (currentIndex === greetings.length - 1) {
+      if (currentIndex  === greetings.length - 1) {
 
         clearInterval(intervalId);
       } else {
@@ -28,6 +31,7 @@ export default function Home() {
   }, [currentIndex]);
 
   return (
+    <AnimatePresence mode="wait">
     <>
       <main className={styles.main}>
         <div className={styles.home}>
@@ -64,5 +68,6 @@ export default function Home() {
 
 
     </>
+    </AnimatePresence>
   );
 }

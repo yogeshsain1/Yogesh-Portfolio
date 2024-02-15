@@ -1,0 +1,75 @@
+.main {
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    overflow: hidden;
+    
+    .body,.mask{
+        height: 100px;
+        
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 160%;
+        span{
+            color: rgb(110, 110, 110);
+        }
+        
+        margin-top: 90px;
+    }
+
+}
+.home{
+    
+    height: 98vh;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.aboutimage{
+    padding: 2%;
+
+}
+
+.goalsandasp{
+    display: flex;
+
+}
+.goalsandasp img{
+    width: 1000px;
+}
+
+.textcontent{
+    align-items: end;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+
+.effes{
+    
+    align-items: center;
+    
+}
+
+
+.aboutimage_PG2{
+    padding: 2%;
+    
+}
+
+.mask_PG2{
+    font-size: 160%;
+    width: 80%;
+    
+}
+.textpg2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

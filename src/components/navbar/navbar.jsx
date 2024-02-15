@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../app/page.module.css";
+
 const Navbar = () => {
   return (
     <>
-
       <div className={styles.navlist}>
-
         <ul className={styles.unorderedlist}>
           <li>
             <Link href="/about" style={{textDecoration: 'none'}}>
@@ -24,7 +23,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-
       </div>
       <div className={styles.navline}></div>
     </>
