@@ -4,22 +4,24 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "@/components/navbar/navbar";
 import { Roboto } from "next/font/google";
-import Home1 from "@/components/homedesign1/home";
 import Dot from "@/components/dot_line";
 import { motion, AnimatePresence } from "framer-motion"; 
+import Object3d from "@/components/threejs";
 
 
 const greetings = ["Hello", "Olá", "Ciao", "Konnichiwa", "Annyeonghaseyo", "Nǐ hǎo", "नमस्ते"];
-
+let onetime = true;
 export default function Home() {
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
+useEffect(() => {
     const intervalId = setInterval(() => {
 
       if (currentIndex  === greetings.length - 1) {
 
         clearInterval(intervalId);
+        
       } else {
 
         setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -31,7 +33,7 @@ export default function Home() {
   }, [currentIndex]);
 
   return (
-    <AnimatePresence mode="wait">
+    
     <>
       <main className={styles.main}>
         <div className={styles.home}>
@@ -63,11 +65,12 @@ export default function Home() {
         <Dot />
 
         
-        <Home1></Home1>
+  
       </main>
 
+      <Object3d/>
 
     </>
-    </AnimatePresence>
+    
   );
 }
