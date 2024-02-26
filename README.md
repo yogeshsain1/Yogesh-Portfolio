@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hello Everyone!
 
-## Getting Started
+<h3>This is my Portfolio that I've been worked on for a while now.</h3>
+<h3>This is just me being creative with React.js</h3>
 
-First, run the development server:
+# TECH STACK
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Frontend
+- **Next.js**: Used for building the frontend, providing server-side rendering and a great developer experience.
+- **React**: Utilized for building reusable UI components and managing application state.
+- **SCSS**: Employed for styling the components, offering more structured and maintainable stylesheets.
+- **Three.js**: Integrated for creating 3D graphics and visualizations in the browser.
+- **drei**: A lightweight wrapper around Three.js, simplifying common tasks and providing additional utilities.
+- **GSAP (GreenSock Animation Platform)**: Utilized for creating smooth animations and interactive effects.
+- **Framer Motion**: Used for building animations and gestures with simple declarative APIs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Other Tools
+- **GitHub**: Hosts the project repository and version control.
+- **npm**: Used for package management and dependency installation.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Getting Started
 
-## Learn More
+To get a local copy of this project up and running on your machine, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+- Node.js and npm installed on your machine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+2. cd your-portfolio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. npm install || npm i
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. npm run dev :: (*localhost:3000)
