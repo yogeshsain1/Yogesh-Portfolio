@@ -24,9 +24,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    width: 100vh;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -44,4 +44,9 @@
     transition:0;
 
 
+}
+
+.mains{
+    overflow: hidden;
+    height: 400px;
 }

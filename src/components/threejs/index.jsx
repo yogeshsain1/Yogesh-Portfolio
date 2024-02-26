@@ -4,31 +4,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three'
 import { OrbitControls } from '@react-three/drei'
 import { motion } from 'framer-motion'
-import { gsap } from "gsap";
-import SplitText from "gsap-trial/SplitText"
-import { ScrollTrigger } from 'gsap-trial/all'
-
-gsap.registerPlugin(SplitText, ScrollTrigger);
-
-let mysplittxt = new SplitText(".nomm", { type: "chars" });
-let chars = mysplittxt.chars;
-
-
-
-
-gsap.from(chars, {
-  yPercent: 130,
-  stagger: 0.04,
-  ease: 'back.out',
-  duration: 1,
-  scrollBehavior: {
-    trigger: '.nomm',
-    start: "top 0%",
-    markers: true
-  }
-})
-
-
+import TextAnime from '../animations/page'
 
 
 export default function Object3d() {
@@ -63,10 +39,6 @@ export default function Object3d() {
     <>
       <div style={{ height: 35 }}></div>
       <div className={styles.master}>
-
-
-
-
 
         <div className={styles.main}>
 
@@ -152,20 +124,19 @@ export default function Object3d() {
         </div>
 
 
-        <div id='mains' className={styles.main2}>
+        <div className={styles.main2}>
+        {/* <div style={{ left: Curserposition.x, top: Curserposition.y, opacity:0.7 }} className={styles.eyeBall}></div> */}
+          
+
+          <TextAnime/>
 
 
-          <div style={{ left: Curserposition.x, top: Curserposition.y }} className={styles.eyeBall}></div>
-
-
-
-          <p className='nomm'>I make websites <span>interactive</span></p>
-          <p>I make websites <span>interactive</span></p>
-          <p>not a web developer; just an <span>Artist</span></p>
+    
         </div>
 
 
       </div>
+      
     </>
   )
 }

@@ -1,0 +1,56 @@
+.main {
+    background-color: #1E1E1E;
+    width: auto;
+    height: 98vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .topComponents {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .backhome {
+    /* Add your styles for BackHomeBtn */
+  }
+  
+  .bcshm {
+    /* Add your styles for bcshm */
+  }
+  
+  .profile {
+    /* Add your styles for Profile */
+  }
+
+
+  .letsconnect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lets{
+    color: rgb(29, 29, 29);
+    font-size: 40px;
+    position: absolute;
+    background-color: rgb(155, 155, 155);
+  }
+  .connect{
+    color: #1E1E1E;
+    font-size: 280px;
+    opacity: 0.2;
+    background-color: #535353;
+}
+
+.magneticconnects{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+}
+.magneticconnects svg{
+    scale: 0.8;
+}

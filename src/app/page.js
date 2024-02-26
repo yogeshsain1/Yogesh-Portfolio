@@ -7,6 +7,7 @@ import { Roboto } from "next/font/google";
 import Dot from "@/components/dot_line";
 import { motion, AnimatePresence } from "framer-motion"; 
 import Object3d from "@/components/threejs";
+import SideScroll from "@/components/sidescroll";
 
 
 const greetings = ["Hello", "Olá", "Ciao", "Konnichiwa", "Annyeonghaseyo", "Nǐ hǎo", "नमस्ते"];
@@ -56,6 +57,17 @@ useEffect(() => {
             </div>
             {/* <div>  arrow </div> */}
           </div>
+          
+          
+          <div className={styles.sidescrollmain}>
+          <SideScroll></SideScroll>
+          
+
+          </div>
+
+
+
+
 
           <div className={styles.displayname} >
             <img src="/vedas.svg" alt="SVG Image" />

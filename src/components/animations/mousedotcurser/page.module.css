@@ -1,0 +1,19 @@
+.main{
+    height: 100vh;
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    overflow: hidden;
+}
+.cursors{
+
+ 
+animation: animatemouse 4s infinite linear
+}
+
+@keyframes animatemouse{
+    
+    100%{
+        
+        rotate: 360deg;
+    }
+}

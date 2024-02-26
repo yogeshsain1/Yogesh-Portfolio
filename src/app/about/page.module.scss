@@ -50,22 +50,43 @@
 }
 
 
-
-
-.effes{
-    
+.cont {
+    position: relative;
+    display: flex;
     align-items: center;
-    
+}
+
+
+
+.goalsandasp {
+   
+    top: 0;
+    left: 0;
 }
 
 
 .aboutimage_PG2{
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+}
+.innerimage{
+    position: absolute;
+    width: 90%;
+}
+.innerimage img{
+    width: 90%;
+    height: 90%;
     
 }
 
+
 .mask_PG2{
-    font-size: 160%;
+    font-size: 210%;
     width: 80%;
     
 }
@@ -74,4 +95,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.text1{
+    transform: translateY(100px);
+
+}   
+.text_1{
+    font-size: 200%;
+}
+.text_1 span{
+    font-size: 200%;
+}
+
+.backhome{
+    transform: translateY(30%);
 }
