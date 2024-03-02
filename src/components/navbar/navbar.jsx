@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.navline}></div>
+      
     </>
   );
 };

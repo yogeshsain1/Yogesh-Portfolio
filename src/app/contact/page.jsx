@@ -20,12 +20,13 @@ const Contact = () => {
       char.addEventListener('mouseenter', () => {
           gsap.to(char, { 
             
-            color: "white"
+            color: "white",
+            opacity:1
           });
       });
   
       char.addEventListener('mouseleave', () => {
-          gsap.to(char, { opacity: 1  });
+          gsap.to(char, { color:"black", opacity: 0.7 });
       });
   });
 
@@ -68,18 +69,8 @@ const Contact = () => {
           <div id='text_1' className={styles.connect}>
           {/* //! Animations */}
           
-          <motion.span
-          initial={{zIndex: 1}}
-          whileHover={{
-            opacity:0
-          }}
-          >C</motion.span>
-          <span>O</span>
-          <span>N</span>
-          <span>N</span>
-          <span>E</span>
-          <span>C</span>
-          <span>T</span>
+          <span>CONNECT</span>
+          
           
           
           </div>

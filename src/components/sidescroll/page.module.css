@@ -1,8 +1,0 @@
-.sidescroll{
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    width: 100vh;
-    gap: 60px;
-   opacity: 0.6;
-}

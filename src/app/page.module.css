@@ -60,7 +60,12 @@
 .navlist {
     width: 5rem;
     top: 0;
-    z-index: 1; /* Ensure the navbar stays on top */
+    z-index: 1; 
+
+}
+
+.nav{
+    z-index: 1;
 }
 
 .navlist li {
@@ -78,7 +83,7 @@
 }
 
 .unorderedlist {
-    gap: 17rem;
+    gap: 11rem;
     display: flex;
     flex-direction: column;
 
@@ -109,9 +114,24 @@
 
 
 
-.arctext {
+/* .arctext {
     margin: 10px;
     animation: rotateImage 30s linear infinite;
+
+} */
+
+.outscroll {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+
+
+}
+
+.scrollss {
+    display: flex;
+    justify-content: flex-end;
+    margin: 7%;
 }
 
 @keyframes rotateImage{
@@ -119,15 +139,86 @@
         transform: rotate(0deg);
     }
     to{
-        /* animation-duration: 12s; */
+
         transform: rotate(360deg);
     }
 }
 
-.displayname {
+
+/* !home name */
+
+.mynamehome{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    font-size: 500%;
+ align-items: center;
+ justify-content: center;
+    display: flex;
+    
+    top: 50%;
+    left: 50%;
     
 }
+.mynamevd{
+        
+}
 
+
+
+
+
+
+.displayname {
+   
+    bottom: 0;
+   align-items: center;
+   justify-content: center;
+    font-size: 200px;
+
+}
+
+.sidescrollmain{
+    position: absolute;
+    top: 0;
+    right: 10vh;
+
+}
+.sidescrollmain{
+    position: absolute;
+    top: 0;
+    right: 10vh;
+
+}
+
+.sliderContainer{
+    z-index: 0;
+    position: absolute;
+    top: calc(100vh - 350px);
+  }
+  
+  .slider{
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .slider p{
+    position: relative;
+    margin: 0px;
+    color: rgb(46, 46, 46);
+    font-size: 230px;
+    font-weight: 500;
+    padding-right: 50px;
+  }
+  
+  .slider p:nth-of-type(2){
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+
+.myname{
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
