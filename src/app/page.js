@@ -3,11 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "@/components/navbar/navbar";
-import { Roboto } from "next/font/google";
 import Dot from "@/components/dot_line";
-import { motion, AnimatePresence } from "framer-motion";
 import Object3d from "@/components/threejs";
-import SideScroll from "@/components/sidescroll";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
