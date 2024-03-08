@@ -8,9 +8,9 @@ import gsap from 'gsap';
 import Card from '../cards';
 import SplitType from 'split-type';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import BackHomeBtn from '@/components/backhomebtn';
 
 gsap.registerPlugin(ScrollTrigger);
-
 export default function Index() {
 
 
@@ -28,17 +28,7 @@ export default function Index() {
         gsap.to(char, { color: "#535353" });
       });
     });
-    // gsap.from(text20.current, {
-    //   scrollTrigger: {
-    //     trigger: text20.current,
-    //     start: "0px bottom",
-    //     end: "bottom+=400px bottom",
-    //     scrub: true,
-    //   },
-    //   opacity: 0,
-    //   left: "-200px"
-    // })
-    
+
 
     gsap.fromTo(chars, {
       opacity: 0,
@@ -67,8 +57,8 @@ export default function Index() {
     }, {
       scrollTrigger: {
         trigger: words1,
-        start: "-150px bottom",
-        end:"130px center",
+        start: "110px bottom",
+        end: "130px center",
         scrub: true
       },
       y: -60,
@@ -79,25 +69,18 @@ export default function Index() {
       color: 'white'
 
     })
-    
-
-    
-
-
-
-
     const Text2 = new SplitType('#gtext2', { types: 'words' })
     const words2 = Text2.words
     gsap.fromTo(words2, {
       opacity: 0,
-      y: 60
+      y: 60,
+      color: 'black'
     }, {
       scrollTrigger: {
         trigger: words2,
-        start: "-130px bottom",
-        end:"130px center",
-        scrub: true,
-        color: 'red'
+        start: "110px bottom",
+        end: "130px center",
+        scrub: true
       },
       y: -60,
       opacity: 1,
@@ -105,9 +88,10 @@ export default function Index() {
       duration: 0.6,
       ease: 'power4.out',
       color: 'white'
+
     })
 
-}, [])
+  }, [])
 
 
 
@@ -137,35 +121,43 @@ export default function Index() {
 
           </div>
         </section>
-        <motion.section className={styles.section2}
-
-        >
-
-          {/* <h1 >G<br/>R<br/>E<br/>E<br/>N<br/> G<br/>E<br/>T<br/>O</h1> */}
+        <section className={styles.section2}>
+       
           <p id='gtext1' style={{ marginRight: "10", position: "relative", color: "white" }}>Experience the purity of web design –<br /> where simplicity meets sophistication, just like the perfect cup of pure tea.</p>
-
+      
           <div className={styles.greengeto}>
             <a href="#section3" className="smooth-scroll-link">
               <img src="greengeto.png" alt="Green Geto" />
             </a>
 
           </div>
+          <div className={styles.greenleaf}>
+              <img src='leaf.svg'></img>
+          </div>
 
-        </motion.section>
+        </section>
         <section id="section3" className={styles.section3}>
+
+        <p id='gtext2' style={{ marginRight: "10", position: "relative", color: "white" }} > Elevate your brand presence and captivate your audience with stunning visuals that speak volumes.</p>
           <div className={styles.designs}>
             <img src="designs.png" alt="Designs" />
           </div>
-          <motion.p id='gtext2' style={{ marginRight: "10", position: "relative", color: "white" }} > Elevate your brand presence and captivate your audience with stunning visuals that speak volumes.</motion.p>
+       
+          
+        
+          <div className={styles.whitebamboo}>
+              <img src='whitebamboo.svg'></img>
+          </div>
+       
         </section>
-
-
+        
+        
 
 
 
 
       </div>
-
+      
     </div>
   )
 }

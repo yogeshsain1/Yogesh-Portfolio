@@ -3,6 +3,7 @@ import styles from './style.module.scss'
 import Image from 'next/image'
 import { motion, useScroll } from 'framer-motion'
 import gsap from 'gsap'
+import BackHomeBtn from '@/components/backhomebtn'
 
 function Card({i, title, description, src, link, color }) {
     
@@ -31,6 +32,8 @@ function Card({i, title, description, src, link, color }) {
 
 
     return (
+        <>
+        
         <div className={styles.cardcontainer}>
             <motion.div id='cards' style={{ backgroundColor: color, top: `calc(-10% + ${i * 30}px )` }} className={styles.card}>
                 <h2>{title}</h2>
@@ -58,7 +61,10 @@ function Card({i, title, description, src, link, color }) {
 
                 </div>
             </motion.div>
+            
         </div>
+        
+        </>
     )
 }
 

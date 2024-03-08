@@ -18,17 +18,17 @@ const Contact = () => {
 
     chars.forEach(char => {
       char.addEventListener('mouseenter', () => {
-          gsap.to(char, { 
-            
-            color: "white",
-            opacity:1
-          });
+        gsap.to(char, {
+
+          color: "white",
+          opacity: 1
+        });
       });
-  
+
       char.addEventListener('mouseleave', () => {
-          gsap.to(char, { color:"black", opacity: 0.7 });
+        gsap.to(char, { color: "black", opacity: 0.7 });
       });
-  });
+    });
 
 
     gsap.fromTo(chars, {
@@ -45,35 +45,36 @@ const Contact = () => {
 
     })
   }, [])
-  
+
 
 
 
   return (
     <>
       <div className={styles.main}>
-
+       
         <div className={styles.topComponents}>
+
           <div className={styles.bcshm}>
             <Link href={`/`}>
               <div className={styles.backhome}><WhiteBackHomeBtn /></div>
             </Link>
           </div>
 
+
           <div className={styles.profile}><Profile /></div>
         </div>
 
         <div className={styles.letsconnect}>
+
           <div className={styles.lets}>‎ Let's‎ ​</div>
 
           <div id='text_1' className={styles.connect}>
-          {/* //! Animations */}
-          
-          <span>CONNECT</span>
-          
-          
-          
+
+            <span>CONNECT</span>
+
           </div>
+
         </div>
 
         <div className={styles.magneticconnects}>
@@ -121,8 +122,8 @@ const Contact = () => {
           </Link>
 
         </div>
+</div>
 
-      </div>
     </>
   )
 }

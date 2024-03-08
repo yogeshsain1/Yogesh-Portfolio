@@ -6,23 +6,23 @@
 }
 
 
-
-
-
 .container section{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     height: 99vh;
-    overflow: hidden;
     
+    
+}
+.container section img{
+    z-index: 1;
+    overflow: hidden;
 }
 
 
-
 .container section p{
-    font-size: 5vh;
+    font-size: 40px;
     width: 800px;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,7 @@
     position: relative;
     overflow: hidden;
     object-fit: cover;
+
 }
 
 
@@ -65,10 +66,17 @@
 
 }
 
-.proj{
-    font-size: 300px;
+.greenleaf,.whitebamboo{
+  
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+    
 }
+.greenleaf img,.whitebamboo img{
+    width: 100%;
 
+}
 
 
 .cards{
@@ -76,21 +84,64 @@
 }
 
 .proj{
-    object-fit: cover;
+    display: inline-block;
+}  
+
+
+.proj span{
+    display: table;
+    font-size: 17.2vw;
 }
 
 
+@media screen and (max-width: 800px) {
+    .container section {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .section3{
+       transform: translateY(20%);
+    }
+    .container section p{
+        width: fit-content;
+      font-size: 28px;
+    }
+    .container section{
+        gap: 10%;
+    }
+    .greenleaf{
+        transform: translateY(-50%);
+    }
+    .whitebamboo{
+        transform: translateY(50%);
+    }
+  }
 
-@media screen and (max-width: 580px) {
-    .logo span{
-        font-size: 80px;
+
+  @media screen and (max-width: 1320px) {
+    .container section {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .section3{
+       transform: translateY(20%);
+    }
+    .container section p{
+        width: fit-content;
+        font-size: 34px;
+    }
+    .container section{
+        gap: 10%;
+    }
+    
+    .section2 img,.section3 img{
         
     }
-    .logo svg{
-        width: 130px;
-        transform: translateX(100%);
-        
-        
-    }
+    .greengeto{
    
-}
+    }
+  }
+
+  

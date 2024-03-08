@@ -32,6 +32,16 @@ export default function Home() {
     requestAnimationFrame(animate);
   }, [])
 
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+  }, [])
+
+
   const animate = () => {
     if (xPercent < -100) {
       xPercent = 0;

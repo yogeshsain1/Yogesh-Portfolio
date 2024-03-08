@@ -46,6 +46,10 @@ const Pg2 = () => {
       ease: 'power4.out',
 
     })
+
+
+
+
   }, [])
 
 
