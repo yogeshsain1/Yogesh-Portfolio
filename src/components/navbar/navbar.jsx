@@ -1,31 +1,43 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../../app/page.module.css";
+
+import { motion, AnimatePresence } from "framer-motion";
+import styles from "./styles.module.scss";
 
 const Navbar = () => {
   return (
-    <>
-      <div className={styles.navlist}>
-        <ul className={styles.unorderedlist}>
+      <div className={styles.main}>
+        <ul className={styles.mainUL}>
           <li>
-            <Link href="/about" style={{textDecoration: 'none'}}>
-              <p>About</p>
+            <Link href="/about">
+              <motion.p
+                whileHover={{scale:1.1}}
+              >
+                About
+              </motion.p>
             </Link>
           </li>
           <li>
-            <Link href="/work" style={{textDecoration: 'none'}}>
-              <p>Work</p>
+            <Link href="/work">
+              <motion.p
+              whileHover={{scale:1.1}}>
+
+                Work
+              </motion.p>
             </Link>
           </li>
           <li>
-            <Link href="/contact" style={{textDecoration: 'none'}}>
-              <p>Contact</p>
+            <Link href="/contact">
+              <motion.p
+                whileHover={{scale:1.1}}
+              >
+                Contact
+              </motion.p>
             </Link>
           </li>
         </ul>
-      </div>
-      
-    </>
+        </div>
+    
   );
 };
 

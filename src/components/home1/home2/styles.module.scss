@@ -1,0 +1,61 @@
+.main{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    .backblock{
+        
+        background-color: rgb(110, 110, 110);
+        width: 80%;
+        height: 80vh;
+        border-radius: 40px;
+        .ved{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin: 0;
+            padding: 0;
+            p{
+                z-index: 2;
+                font-size: 16vw;
+                margin: 0;
+                padding: 0;
+                color: rgb(0, 0, 0);
+                
+            }
+            span{
+                z-index: 2;
+                font-size: 3vw;
+                margin: 0;
+                padding: 0;
+                transform: translateY(-50%);
+            }
+            
+        }
+
+        .sun{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 36vw;
+            height: 36vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            svg{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+

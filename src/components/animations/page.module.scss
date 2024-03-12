@@ -1,19 +1,21 @@
 .main{
 
-  
+    display: flex;
+    flex-direction: column;
+
     .mask, .body{
       
-
+      width: 98.5vw;
       align-items: center;
       justify-content: center;
       color: #afa18f;
-      font-size: 70px;
-      line-height: 66px;
+      font-size: 7vw;
+      line-height: 7vw;
       cursor: default;
       
       p{
-        width: 900px;
-        padding:40px;
+        
+
       }
       span{
         color: #ec4e39;
@@ -23,9 +25,11 @@
     .mask{
       mask-image: url('/mask.svg');
       mask-repeat: no-repeat;
-      mask-size: 40px;
+      mask-size: 18vw;
       background: #ec4e39;
       position: absolute;
       color: black;
+      overflow: hidden;
+      
     }
   }

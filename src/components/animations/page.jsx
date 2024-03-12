@@ -12,10 +12,13 @@ export default function TextAnime() {
 
   return (
     <main className={styles.main}>
+      <div>
+        
+      </div>
       <motion.div 
         className={styles.mask}
         animate={{
-          WebkitMaskPosition: `${x - 1000}px ${y -500}px`,
+          WebkitMaskPosition: `${x-200}px ${y-380}px`,
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "backOut", duration:0.5}}

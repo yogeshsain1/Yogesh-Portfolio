@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -23,7 +22,7 @@ export default function Roundmousecurser() {
   }, []);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.mmain}>
       <motion.div
         animate={{rotate: 360 ,x: (mouseposition.x - size/2), y: (mouseposition.y - size/2)}}
         transition={{

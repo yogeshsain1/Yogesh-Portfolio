@@ -4,10 +4,8 @@ import styles from './page.module.css'
 import Projects from './components/Projects';
 import Card from './components/cards';
 import { projects } from './components/cards/data';
-import Worktogether from './components/worktogether';
 import Link from 'next/link';
 import BackHomeBtn from '@/components/backhomebtn';
-import WhiteBackHomeBtn from '@/components/Whitebackhomebtn';
 export default function Home() {
 
   useEffect(() => {
@@ -31,7 +29,9 @@ export default function Home() {
             projects.map((projects, index) => {
               return <Card key={index} i={index} {...projects} />
             })
+
           }
+
         </div>
       </section>
       <div style={{ display: "flex", justifyContent: "center" }}>

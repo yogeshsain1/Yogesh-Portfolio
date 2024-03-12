@@ -131,7 +131,7 @@ export default function Index() {
             </a>
 
           </div>
-          <div className={styles.greenleaf}>
+          <div   data-scroll data-scroll-speed="0.4" className={styles.greenleaf}>
               <img src='leaf.svg'></img>
           </div>
 
@@ -145,7 +145,7 @@ export default function Index() {
        
           
         
-          <div className={styles.whitebamboo}>
+          <div   data-scroll data-scroll-speed="0.4" className={styles.whitebamboo}>
               <img src='whitebamboo.svg'></img>
           </div>
        
