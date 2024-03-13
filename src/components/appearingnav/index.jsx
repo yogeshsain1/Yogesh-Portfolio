@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import styles from './styles.module.scss'
 
 const navLinks = [
+  { title: "Home", href: "/", size: 100 },
   { title: "About", href: "/about", size: 100 },
   { title: "Work", href: "/work", size: 100 },
   { title: "Contact", href: "/contact", size: 100 },
@@ -57,11 +58,12 @@ const ApNav = () => {
     <>
     <div  className={styles.btns} onClick={toggleMenu}>
         <motion.div style={{ color: 'black'}} whileHover={{scale:0.8}} className={styles.navvs}>
+
           {open && (<p>Close</p>)}
           {!open && (<p>Menu</p>)}
         </motion.div>
       </div>
-    <header className={styles.head}>
+    <header className={styles.head} style={{ zIndex: open ? 3 : 2 }}>
       
       <div className={styles.innerhead}>
       
@@ -94,7 +96,10 @@ const ApNav = () => {
                   >
                     {navLinks.map((link, index) => {
                       return (
-                        <div className={styles.redirectitems} key={index}>
+                        <div onClick={()=>{
+                          setTimeout(()=>{toggleMenu()},1000)
+                          
+                          }} className={styles.redirectitems} key={index}>
                           <MobileNavLink
                             title={link.title}
                             href={link.href}
@@ -138,7 +143,7 @@ const MobileNavLink = ({ title, href }) => {
     <motion.div
       variants={mobileLinkVars}
     >
-      <Link href={href} style={{ textDecoration: 'none', color: 'wheat' }}>
+      <Link  href={href} style={{ textDecoration: 'none', color: 'wheat' }}>
         <p style={{margin:0}}>{title}</p>
       </Link>
     </motion.div>

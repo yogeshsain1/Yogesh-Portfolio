@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useEffect, useRef } from 'react'
 import styles from "./style.module.scss";
-import { delay, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 function H0() {

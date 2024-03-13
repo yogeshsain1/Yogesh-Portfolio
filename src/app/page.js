@@ -1,19 +1,11 @@
 "use client"
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Head from "next/head";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
-import Navbar from "@/components/navbar/navbar";
-import Dot from "@/components/dot_line";
-import Object3d from "@/components/threejs";
-import gsap from 'gsap';
-import contact from "@/components/Contact";
-import { ScrollTrigger } from 'gsap/all';
-import MainHome from "@/components/home1/h";
 import { AnimatePresence } from 'framer-motion';
 import Preloader from "@/components/Preloader";
 import Slide from "@/components/SlidingImages";
 import H2 from "@/components/home1/home2/h2";
-import TextAnime from "@/components/animations/page";
 import TXTS from "@/components/animations/app/page";
 import ApNav from "@/components/appearingnav";
 import H0 from "@/components/home1/home0";
@@ -37,6 +29,7 @@ export default function Home() {
   return (
 
     <>
+      
       <ApNav />
       <main className={styles.main}>
         <AnimatePresence mode='wait'>
@@ -53,7 +46,7 @@ export default function Home() {
 
           <Slide />
         </div>
-        <div style={{zIndex: 0}}>
+        <div style={{ zIndex: 0 }}>
           <TXTS />
         </div>
 

@@ -1,8 +1,8 @@
 
 import { ScrollTrigger } from 'gsap/all';
-import React, { useLayoutEffect, useEffect, useRef, useState, useCallback } from 'react'
+import React, {  useEffect, useRef } from 'react'
 import styles from "./styles.module.scss";
-import { delay, motion } from 'framer-motion';
+
 import gsap from 'gsap';
 
 
