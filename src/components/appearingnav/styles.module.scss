@@ -18,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(43, 43, 43);
 }
 
 // .apearingelements{
@@ -42,14 +42,14 @@
     align-items: center;
     justify-content: center;
     .redirectitems{
-      font-size: 10vw;
+      font-size: 8vw;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 7vw;
       p a {
         text-decoration: none;
-        color: white;
+        color: rgb(253, 238, 209);
       }
     }
   }

@@ -3,8 +3,7 @@ import styles from './page.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import useMousePosition from './utils/useMousePosition';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+
 export default function TXTS() {
 
   const [isHovered, setIsHovered] = useState(false);
@@ -14,12 +13,7 @@ export default function TXTS() {
 
   return (
     <main className={styles.main}>
-    {/* <div className={styles.sliderContainer} >
-          <div style={{position:"absolute"}} ref={slider} className={styles.slider}>
-            <p ref={firstText}>Creative Developer -</p>
-            <p ref={secondText}>Creative Developer -</p>
-          </div>
-        </div> */}
+
       <div className={styles.backrender}>
 
       <video src='/video/vd2.mp4' autoPlay loop muted />

@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
-
+import svgs from '../../../public/images/backgroundcard/DOT.svg'
 const words = ["Hello", "Bonjour","Olá", "Ciao", "やあ", "Konnichiwa", "Annyeonghaseyo", "Nǐ hǎo", "नमस्ते"]
 
 export default function Index() {
@@ -39,7 +39,7 @@ export default function Index() {
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
             {dimension.width > 0 && 
             <>
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
+                <motion.p variants={opacity} initial="initial" animate="enter">☉ {words[index]} ☉</motion.p>
                 <svg>
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>
@@ -48,3 +48,4 @@ export default function Index() {
         </motion.div>
     )
 }
+

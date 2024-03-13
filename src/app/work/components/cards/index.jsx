@@ -3,7 +3,7 @@ import styles from './style.module.scss'
 import Image from 'next/image'
 import { motion, useScroll } from 'framer-motion'
 import gsap from 'gsap'
-import BackHomeBtn from '@/components/backhomebtn'
+
 
 function Card({ i, title, description, src, link, color, svgs, backs }) {
 

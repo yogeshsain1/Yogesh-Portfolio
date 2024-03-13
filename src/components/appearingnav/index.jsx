@@ -138,7 +138,7 @@ const MobileNavLink = ({ title, href }) => {
     <motion.div
       variants={mobileLinkVars}
     >
-      <Link href={href} style={{ textDecoration: 'none', color: 'white' }}>
+      <Link href={href} style={{ textDecoration: 'none', color: 'wheat' }}>
         <p style={{margin:0}}>{title}</p>
       </Link>
     </motion.div>

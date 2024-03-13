@@ -1,23 +1,39 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './page.module.css'
 import Projects from './components/Projects';
 import Card from './components/cards';
 import { projects } from './components/cards/data';
-import Link from 'next/link';
-import BackHomeBtn from '@/components/backhomebtn';
+import Index from '@/components/Preloader_work';
+import { AnimatePresence, motion } from "framer-motion"
+import ApNav from '@/components/appearingnav';
 export default function Home() {
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    (
-      async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default
-        const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
+      (
+          async () => {
+              const LocomotiveScroll = (await import('locomotive-scroll')).default
+              const locomotiveScroll = new LocomotiveScroll();
+
+              setTimeout(() => {
+                  setIsLoading(false);
+                  document.body.style.cursor = 'default'
+                  window.scrollTo(0, 0);
+              }, 1000)
+          }
+      )()
   }, [])
 
+
   return (
+    <>
+    <div style={{zIndex:4}}>
+    <ApNav/>
+    </div>
+        <AnimatePresence mode='wait'>
+                {isLoading && <Index/>}
+            </AnimatePresence>
+    
     <main className={styles.main}>
 
       <Projects />
@@ -34,13 +50,12 @@ export default function Home() {
 
         </div>
       </section>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Link href={`/`}>
-          <BackHomeBtn />
-        </Link>
+      <div style={{ display: "flex", justifyContent: "center",zIndex:3 }}>
+        <p style={{color:'wheat', fontSize:"50px"}}>:)</p>
       </div>
 
 
     </main>
+    </>
   )
 }

@@ -1,14 +1,9 @@
 "use client"
-import React, { useEffect, useState, useLayoutEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import styles from './style.module.css';
-import Image from 'next/image';
-import { motion } from "framer-motion"
-import Link from 'next/link'
 import gsap from 'gsap';
-import Card from '../cards';
 import SplitType from 'split-type';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
-import BackHomeBtn from '@/components/backhomebtn';
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Index() {

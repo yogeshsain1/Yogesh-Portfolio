@@ -1,7 +1,7 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './page.module.scss'
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Link from 'next/link'
 import Framermagnetic from './component/framermagnetic'
 import Profile from './profile'
@@ -9,7 +9,25 @@ import gsap from 'gsap';
 import SplitType from 'split-type';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import WhiteBackHomeBtn from '@/components/Whitebackhomebtn'
+import Index from '@/components/Preloader_contact'
+
+
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    (
+        async () => {
+            const LocomotiveScroll = (await import('locomotive-scroll')).default
+            const locomotiveScroll = new LocomotiveScroll();
+
+            setTimeout(() => {
+                setIsLoading(false);
+                document.body.style.cursor = 'default'
+                window.scrollTo(0, 0);
+            }, 500)
+        }
+    )()
+}, [])
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -40,7 +58,7 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       stagger: 0.13,
-      duration: 3.3,
+      duration: 4,
       ease: 'power4.out',
 
     })
@@ -51,8 +69,12 @@ const Contact = () => {
 
   return (
     <>
+
       <div className={styles.main}>
-       
+      
+        <AnimatePresence mode='wait'>
+                {isLoading && <Index/>}
+            </AnimatePresence>
         <div className={styles.topComponents}>
 
           <div className={styles.bcshm}>
