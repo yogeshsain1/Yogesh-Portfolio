@@ -8,7 +8,7 @@ import Object3d from "@/components/threejs";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
-const greetings = ["Hello", "Olá", "Ciao", "Konnichiwa", "Annyeonghaseyo", "Nǐ hǎo", "नमस्ते"];
+const greetings = [];
 let onetime = true;
 export default function Home() {
   const firstText = useRef(null);

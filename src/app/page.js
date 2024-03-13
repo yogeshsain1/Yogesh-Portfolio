@@ -15,6 +15,8 @@ import Slide from "@/components/SlidingImages";
 import H2 from "@/components/home1/home2/h2";
 import TextAnime from "@/components/animations/page";
 import TXTS from "@/components/animations/app/page";
+import ApNav from "@/components/appearingnav";
+import H0 from "@/components/home1/home0";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,20 +37,25 @@ export default function Home() {
   return (
 
     <>
+      <ApNav />
       <main className={styles.main}>
         <AnimatePresence mode='wait'>
           {isLoading && <Preloader />}
         </AnimatePresence>
 
-        <Navbar />
+
+        <div style={{ overflow: 'hidden' }}>
+          <H0 />
+
+        </div>
         <H2 />
         <div style={{ overflow: "hidden" }}>
 
-        <Slide />
+          <Slide />
         </div>
-
-        <TXTS/>
-
+        <div style={{zIndex: 0}}>
+          <TXTS />
+        </div>
 
 
       </main>

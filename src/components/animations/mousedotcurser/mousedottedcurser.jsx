@@ -6,7 +6,7 @@ export default function Roundmousecurser() {
   const [mouseposition, setmouseposition] = useState({ x: 0, y: 0 });
   const size = 70;
   const updatemousepos = (e) => {
-    console.log(e.clientX, e.clientY)
+
     setmouseposition({
       x: e.clientX, y: e.clientY
     })
@@ -20,6 +20,8 @@ export default function Roundmousecurser() {
       window.removeEventListener('mousemove', updatemousepos);
     }
   }, []);
+
+  useEffect(()=>{},index)
 
   return (
     <main className={styles.mmain}>

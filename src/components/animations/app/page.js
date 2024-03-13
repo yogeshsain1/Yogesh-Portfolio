@@ -34,12 +34,13 @@ export default function TXTS() {
       >
 
         <p onMouseEnter={() => { setIsHovered(true) }} onMouseLeave={() => { setIsHovered(false) }}>
-          A visual designer - with skills that haven't been replaced by A.I (yet) - making good shit only if the paycheck is equally good.
+          An Artist with developer skills - that haven't been replaced by A.I (yet) <br/>Ctrl + Code + Create.
+          
         </p>
       </motion.div>
 
       <div className={styles.body}>
-        <p>I'm a <span>selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience.</p>
+        <p>I'm a <span>Skilled</span> Frontend designer & Developer with strong focus on producing high quality & impactful web experience.</p>
       </div>
       
 

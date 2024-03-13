@@ -1,7 +1,7 @@
 "use client"
-import Picture1 from '../../../public/images/10.jpg';
-import Picture2 from '../../../public/images/20.png';
-import Picture3 from '../../../public/images/30.jpg';
+import Picture1 from '../../../public/images/10.jpg'
+import Picture2 from '../../../public/images/20.png'
+import Picture3 from '../../../public/images/30.jpg'
 import Picture4 from '../../../public/images/40.png'
 import Picture5 from '../../../public/images/50.png'
 import Picture6 from '../../../public/images/60.jpg'
@@ -11,7 +11,7 @@ import Navbar from '@/components/navbar/navbar'
 import React from 'react'
 import Image from 'next/image'
 import styles from './page.module.scss'
-import { motion, useTransform,AnimatePresence } from "framer-motion"
+import { motion, useTransform, AnimatePresence } from "framer-motion"
 import gsap from 'gsap';
 import SplitType from 'split-type';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
@@ -36,18 +36,18 @@ const About = () => {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         (
-          async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll')).default
-            const locomotiveScroll = new LocomotiveScroll();
-    
-            setTimeout(() => {
-              setIsLoading(false);
-              document.body.style.cursor = 'default'
-              window.scrollTo(0, 0);
-            }, 1000)
-          }
+            async () => {
+                const LocomotiveScroll = (await import('locomotive-scroll')).default
+                const locomotiveScroll = new LocomotiveScroll();
+
+                setTimeout(() => {
+                    setIsLoading(false);
+                    document.body.style.cursor = 'default'
+                    window.scrollTo(0, 0);
+                }, 1000)
+            }
         )()
-      }, [])
+    }, [])
 
 
 
@@ -296,9 +296,9 @@ const About = () => {
 
     return (
         <main className={styles.main}>
-        <AnimatePresence mode='wait'>
-          {isLoading && <Preloder />}
-        </AnimatePresence>
+            <AnimatePresence mode='wait'>
+                {isLoading && <Preloder />}
+            </AnimatePresence>
             <div className={styles.donut}>
                 <Donut />
             </div>
@@ -438,7 +438,7 @@ const About = () => {
 
             </div>
 
-            
+
 
         </main>
 

@@ -1,43 +1,82 @@
-import React from 'react'
+
+import { ScrollTrigger } from 'gsap/all';
+import React, { useLayoutEffect, useEffect, useRef, useState, useCallback } from 'react'
 import styles from "./styles.module.scss";
-import { motion } from 'framer-motion';
+import { delay, motion } from 'framer-motion';
+import gsap from 'gsap';
+
+
 function H2() {
+
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: e => direction = e.direction * -1
+      },
+      x: "-500px",
+    })
+    requestAnimationFrame(animate);
+  }, [])
+
+
+
+
+
+
+  const animate = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    }
+    else if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent })
+    gsap.set(secondText.current, { xPercent: xPercent })
+    requestAnimationFrame(animate);
+
+  }
+
+
   return (
     <div className={styles.main}>
-      <div className={styles.backblock}>
-        <div className={styles.ved}>
-          <motion.div className={styles.sun}
+      <div className={styles.section1}>
 
-            style={{ opacity: 0.3 }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 23, repeat: Infinity, ease: "linear" }}
+        <section className={styles.secpart1}>
+          <video src='/video/two.mp4' autoPlay loop muted />
+          
+
+        </section>
+        <section className={styles.secpart2}>
+          <video src='/video/one.mp4' autoPlay loop muted />
 
 
-          >
-            <svg width="857" height="857" viewBox="0 0 857 857" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="104.87" y="104.871" width="647.258" height="647.258" rx="323.629" fill="#F1F1F1" />
-              <path d="M413.853 793.999V856.565H390.963V793.999H413.853ZM464.211 793.999V856.565H441.321V793.999H464.211Z" fill="white" />
-              <path d="M274.915 760.496L250.972 818.3L229.825 809.54L253.768 751.737L274.915 760.496ZM321.44 779.767L297.497 837.571L276.349 828.811L300.292 771.008L321.44 779.767Z" fill="white" />
-              <path d="M159.557 676.451L115.317 720.692L99.1309 704.506L143.372 660.265L159.557 676.451ZM195.166 712.059L150.925 756.3L134.739 740.114L178.98 695.874L195.166 712.059Z" fill="white" />
-              <path d="M85.1443 554.656L27.3408 578.599L18.5812 557.451L76.3846 533.508L85.1443 554.656ZM104.415 601.181L46.612 625.124L37.8524 603.976L95.6558 580.033L104.415 601.181Z" fill="white" />
-              <path d="M63.0002 412.195H0.434181L0.434181 389.305H63.0002L63.0002 412.195ZM63.0002 462.553H0.434181L0.434181 439.663H63.0002L63.0002 462.553Z" fill="white" />
-              <path d="M96.5008 274.915L38.6973 250.972L47.457 229.825L105.26 253.768L96.5008 274.915ZM77.2296 321.44L19.4262 297.497L28.1858 276.349L85.9892 300.292L77.2296 321.44Z" fill="white" />
-              <path d="M180.549 159.555L136.309 115.315L152.494 99.1289L196.735 143.37L180.549 159.555ZM144.941 195.164L100.7 150.923L116.886 134.737L161.127 178.978L144.941 195.164Z" fill="white" />
-              <path d="M302.343 85.1409L278.4 27.3374L299.548 18.5778L323.491 76.3813L302.343 85.1409ZM255.818 104.412L231.875 46.6086L253.023 37.849L276.966 95.6525L255.818 104.412Z" fill="white" />
-              <path d="M443.145 63V0.433998L466.035 0.433998V63L443.145 63ZM392.787 63V0.433998L415.677 0.433998V63L392.787 63Z" fill="white" />
-              <path d="M582.084 96.5023L606.027 38.6989L627.175 47.4585L603.232 105.262L582.084 96.5023ZM535.559 77.2312L559.502 19.4277L580.65 28.1873L556.707 85.9908L535.559 77.2312Z" fill="white" />
-              <path d="M697.443 180.548L741.684 136.307L757.87 152.493L713.629 196.733L697.443 180.548ZM661.835 144.939L706.076 100.698L722.261 116.884L678.02 161.125L661.835 144.939Z" fill="white" />
-              <path d="M771.855 302.343L829.658 278.4L838.418 299.547L780.615 323.49L771.855 302.343ZM752.584 255.818L810.387 231.875L819.147 253.023L761.343 276.966L752.584 255.818Z" fill="white" />
-              <path d="M793.999 444.804H856.565V467.694H793.999V444.804ZM793.999 394.446H856.565V417.336H793.999V394.446Z" fill="white" />
-              <path d="M760.498 582.083L818.302 606.026L809.542 627.174L751.739 603.231L760.498 582.083ZM779.77 535.559L837.573 559.502L828.813 580.649L771.01 556.706L779.77 535.559Z" fill="white" />
-              <path d="M676.451 697.443L720.692 741.684L704.507 757.87L660.266 713.629L676.451 697.443ZM712.06 661.835L756.301 706.075L740.115 722.261L695.874 678.02L712.06 661.835Z" fill="white" />
-              <path d="M554.656 771.858L578.599 829.661L557.452 838.421L533.509 780.617L554.656 771.858ZM601.181 752.586L625.124 810.39L603.977 819.15L580.034 761.346L601.181 752.586Z" fill="white" />
-            </svg>
+        </section>
 
-          </motion.div>
-          <p>VEDAS'S</p>
-          <span>portfolio</span>
+      </div>
+
+      <div className={styles.section2}>
+        <video style={{zIndex: 0}} src='/video/three.mp4' autoPlay loop muted />
+        
+        <div   data-scroll data-scroll-speed="0.1"   className={styles.portfolio}>
+          <span>(</span>
+
+          <p>portfolio</p>
+
+          <span>)</span>
         </div>
+
+
 
       </div>
     </div>

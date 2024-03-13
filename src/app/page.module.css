@@ -1,4 +1,18 @@
 .main {
     height: 100vh;
-    background-color: rgb(161, 161, 161);
+    background-color: #1D1D1D;
+}
+
+.navvs{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(220, 224, 157);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    border-radius: 100%;
+    position: fixed;
+    margin: 20px;
 }
