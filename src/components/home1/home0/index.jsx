@@ -91,7 +91,7 @@ function H0() {
             },
             x: "-500px",
         })
-        requestAnimationFrame(animate);
+        // requestAnimationFrame(animate);
     }, [])
 
 
@@ -106,7 +106,7 @@ function H0() {
         gsap.set(firstText.current, { xPercent: xPercent })
         gsap.set(secondText.current, { xPercent: xPercent })
         xPercent += 0.02 * direction;
-        requestAnimationFrame(animate);
+        // requestAnimationFrame(animate);
     }
 
 
