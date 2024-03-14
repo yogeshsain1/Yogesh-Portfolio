@@ -1,5 +1,4 @@
 "use client"
-import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import { AnimatePresence } from 'framer-motion';
@@ -11,6 +10,24 @@ import ApNav from "@/components/appearingnav";
 import H0 from "@/components/home1/home0";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    // Update initial screen width
+    updateScreenWidth();
+
+    // Add event listener for resizing
+    window.addEventListener('resize', updateScreenWidth);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
 
   useEffect(() => {
     (
@@ -26,6 +43,9 @@ export default function Home() {
       }
     )()
   }, [])
+
+
+ 
   return (
 
     <>
@@ -39,10 +59,19 @@ export default function Home() {
         </g>
 
         <div style={{ overflow: 'hidden' }}>
-          <H0 />
+        <H0 />
 
         </div>
-        <H2 />
+
+        
+        {screenWidth >= 780 && (
+          <div style={{ overflow: "hidden" }}>
+            <H2 />
+          </div>
+        )}
+
+
+
         <div style={{ overflow: "hidden" }}>
 
           <Slide />
