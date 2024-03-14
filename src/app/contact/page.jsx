@@ -116,7 +116,7 @@ const Contact = () => {
 
         <div className={styles.letsconnect}>
 
-          <div className={styles.lets}>Let's​</div>
+        <div className={styles.lets}>Let&apos;s</div>
 
           <div id='text_1' className={styles.connect}>
 

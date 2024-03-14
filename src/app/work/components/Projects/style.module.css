@@ -84,6 +84,7 @@
 }
 
 .proj{
+    z-index: 2;
     display: inline-block;
 }  
 

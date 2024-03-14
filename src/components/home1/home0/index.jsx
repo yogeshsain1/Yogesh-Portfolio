@@ -164,7 +164,7 @@ function H0() {
             </section>
             <div id='text1' className={styles.linex}>
                 <div className={styles.hellome}>
-                    <h1 className={styles.itsme}>IT'S ME,</h1>
+                    <h1 className={styles.itsme}>IT&apos;S ME,</h1>
                     <g data-scroll data-scroll-speed="0.4" className={raleway.className}>
                         <p  className={styles.vedas}>VEDAS</p>
                     </g>
