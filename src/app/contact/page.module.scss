@@ -10,6 +10,8 @@
 .topComponents {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  width: 100%;
 }
 .letsconnect {
   display: flex;
@@ -27,9 +29,17 @@
   }
   .backhome{
     scale: 0.9;
-    transform: translateX(-20%);
-    transform: translateY(-16%);
+    transform: translateX(-70px);
+   
 
+  }
+  .bcshm{
+    display: flex;
+    position: relative;
+    transform: translateX(-30px);
+    transform: translateY(-25%);
+    scale: 0.9;
+    width: 50%;
   }
 }
 

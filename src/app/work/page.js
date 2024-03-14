@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import Projects from './components/Projects';
 import Card from './components/cards';
 import { projects } from './components/cards/data';
-import Index from '@/components/Preloader_work';
+import Index from '@/components/Preloader_contact';
 import { AnimatePresence, motion } from "framer-motion"
 import ApNav from '@/components/appearingnav';
 export default function Home() {
@@ -23,15 +23,15 @@ export default function Home() {
           }
       )()
   }, [])
-
+const words = ["Work"]
 
   return (
     <>
     <div style={{zIndex:4}}>
     <ApNav/>
     </div>
-        <AnimatePresence mode='wait'>
-                {isLoading && <Index/>}
+            <AnimatePresence mode='wait'>
+                {isLoading && <Index words={words}/>}
             </AnimatePresence>
     
     <main className={styles.main}>

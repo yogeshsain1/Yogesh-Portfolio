@@ -1,16 +1,87 @@
 import React, { useLayoutEffect, useEffect, useRef } from 'react'
 import styles from "./style.module.scss";
 import gsap from 'gsap';
+import SplitType from 'split-type';
 import { ScrollTrigger } from 'gsap/all';
+import { Poppins } from 'next/font/google'
+import { Lato } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
+import { Raleway } from 'next/font/google'
+import { Oswald } from 'next/font/google'
+import { Nunito } from 'next/font/google'
+import { Unica_One } from 'next/font/google';
+const unica = Unica_One({
+    subsets: ['latin'],
+    weight: ['400']
+});
+
+
+
+
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['400']
+});
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['400']
+});
+const montserrat = Montserrat({
+    subsets: ['vietnamese'],
+    weight: ['500']
+});
+const raleway = Raleway({
+    subsets: ['vietnamese'],
+    weight: ['600']
+});
+const nunito = Nunito({
+    subsets: ['latin'],
+    weight: ['400']
+});
+
+const oswald = Oswald({
+    subsets: ['latin'],
+    weight: ['400']
+});
+
+
 function H0() {
+
+
+    useEffect(() => {
+
+        gsap.fromTo('#text1', {
+            opacity: 0,
+            y: -280
+          }, {
+            y: 0,
+            opacity: 1,
+            stagger: 0.13,
+            duration: 7,
+            ease: 'power4.out',
+      
+          })
+
+    },[])
+
+
+
+
+
+
+
+
+
+
+
     useEffect(() => {
         (
-          async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll')).default
-            const locomotiveScroll = new LocomotiveScroll();
-          }
+            async () => {
+                const LocomotiveScroll = (await import('locomotive-scroll')).default
+                const locomotiveScroll = new LocomotiveScroll();
+            }
         )()
-      }, [])
+    }, [])
 
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -82,20 +153,23 @@ function H0() {
     return (
         <div className={styles.main}>
             <section className={styles.secpart2}>
-
+                <g  className={montserrat.className}>
                 <div className={styles.sliderContainer}>
                     <div ref={slider} className={styles.slider}>
                         <p ref={firstText}>Jai Shree Krishna -</p>
                         <p ref={secondText}>Jai Shree Krishna -</p>
                     </div>
                 </div>
-
+                </g>
             </section>
-            <div className={styles.linex}>
+            <div id='text1' className={styles.linex}>
                 <div className={styles.hellome}>
                     <h1 className={styles.itsme}>IT'S ME,</h1>
-                    <p  data-scroll data-scroll-speed="0.4"  className={styles.vedas}>VEDAS</p>
+                    <g data-scroll data-scroll-speed="0.4" className={raleway.className}>
+                        <p  className={styles.vedas}>VEDAS</p>
+                    </g>
                 </div>
+
             </div>
 
         </div>

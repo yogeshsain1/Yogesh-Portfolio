@@ -16,8 +16,48 @@ import SplitType from 'split-type';
 import { useScroll } from 'framer-motion'
 import Framer from '../contact/component/framermagnetic';
 import Donut from '@/components/Donute';
-import Preloder from '@/components/Preloader_about';
 import ApNav from '@/components/appearingnav'
+import Index from '@/components/Preloader_contact'
+import { Poppins } from 'next/font/google'
+import { Lato } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
+import { Raleway } from 'next/font/google'
+import { Oswald } from 'next/font/google'
+import { Nunito } from 'next/font/google'
+import { Unica_One } from 'next/font/google';
+const unica = Unica_One({
+    subsets: ['latin'],
+    weight: ['400']
+});
+
+
+
+
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['400']
+});
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['400']
+});
+const montserrat = Montserrat({
+    subsets: ['vietnamese'],
+    weight: ['500']
+});
+const raleway = Raleway({
+    subsets: ['latin'],
+    weight: ['400']
+});
+const nunito = Nunito({
+    subsets: ['latin'],
+    weight: ['400']
+});
+
+const oswald = Oswald({
+    subsets: ['latin'],
+    weight: ['400']
+});
 
 
 
@@ -276,14 +316,14 @@ const About = () => {
 
 
 
-
+    const wordss =["About"]
 
     return (
         <>
             <ApNav />
             <main className={styles.main}>
                 <AnimatePresence mode='wait'>
-                    {isLoading && <Preloder />}
+                    {isLoading && <Index words={wordss} />}
                 </AnimatePresence>
                 <div className={styles.donut}>
                     <Donut />
@@ -314,7 +354,9 @@ const About = () => {
 
 
                             className={styles.p22} id='textss2'>
-                            A profile that defines who i really am<span id='dott'>.</span>
+                            <g className={nunito.className}>
+                            A profile that defines who i really am<span id='dott' style={{color:'wheat'}}>.</span>
+                            </g>
                         </motion.p>
                     </div>
                 </div>

@@ -37,6 +37,11 @@
            margin: 0;
             font-size: 20vw;
         }
+        @media (max-width: 700px) {
+          .vedas {
+              font-size: 25vw;
+          }
+        }
     }
   }
 }

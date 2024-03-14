@@ -10,8 +10,37 @@ import SplitType from 'split-type';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import WhiteBackHomeBtn from '@/components/Whitebackhomebtn'
 import Index from '@/components/Preloader_contact'
+import { Poppins } from 'next/font/google'
+import { Lato } from 'next/font/google'  
+import { Montserrat } from 'next/font/google'
+import { Raleway } from 'next/font/google'
+import { Oswald } from 'next/font/google'
+import { Nunito } from 'next/font/google'
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400']
+});
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400']
+});
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['500']
+});
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400']
+});
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400']
+});
 
-
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400']
+});
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -53,8 +82,6 @@ const Contact = () => {
       opacity: 0,
       y: -250
     }, {
-
-
       y: 0,
       opacity: 1,
       stagger: 0.13,
@@ -66,14 +93,14 @@ const Contact = () => {
 
 
 
-
+  const words = ["Contact"]
   return (
     <>
-
+      
       <div className={styles.main}>
       
         <AnimatePresence mode='wait'>
-                {isLoading && <Index/>}
+                {isLoading && <Index words={words} />}
             </AnimatePresence>
         <div className={styles.topComponents}>
 
@@ -93,7 +120,7 @@ const Contact = () => {
 
           <div id='text_1' className={styles.connect}>
 
-            <span>CONNECT</span>
+            <span className={lato.className}>CONNECT</span>
 
           </div>
 
