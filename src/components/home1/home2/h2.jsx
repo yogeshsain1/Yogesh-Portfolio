@@ -13,7 +13,7 @@ function H2() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.section1}>
+      {/* <div className={styles.section1}>
 
         <section className={styles.secpart1}>
           <video src='/video/two.mp4' autoPlay loop muted />
@@ -57,7 +57,7 @@ function H2() {
 
 
 
-      </div>
+      </div> */}
     </div>
   )
 }
