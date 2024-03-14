@@ -8,9 +8,10 @@ import H2 from "@/components/home1/home2/h2";
 import TXTS from "@/components/animations/app/page";
 import ApNav from "@/components/appearingnav";
 import H0 from "@/components/home1/home0";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     const updateScreenWidth = () => {
@@ -44,12 +45,8 @@ export default function Home() {
     )()
   }, [])
 
-
- 
   return (
-
     <>
-
       <ApNav />
       <main className={styles.main}>
         <g>
@@ -59,32 +56,23 @@ export default function Home() {
         </g>
 
         <div style={{ overflow: 'hidden' }}>
-        <H0 />
-
+          <H0 />
         </div>
 
-        
         {screenWidth >= 780 && (
           <div style={{ overflow: "hidden" }}>
             <H2 />
           </div>
         )}
 
-
-
         <div style={{ overflow: "hidden" }}>
-
           <Slide />
         </div>
+
         <div style={{ zIndex: 0 }}>
           <TXTS />
         </div>
-
-
       </main>
-
-
     </>
-
   );
 }
