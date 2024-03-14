@@ -145,7 +145,7 @@ const ApNav = () => {
                       {navLinks.map((link, index) => {
                         return (
                           <div onClick={() => {
-                            setTimeout(() => { toggleMenu() }, 1000)
+                            setTimeout(() => { toggleMenu() }, 2000)
 
                           }} className={styles.redirectitems} key={index}>
                             <MobileNavLink

@@ -42,7 +42,7 @@ const oswald = Oswald({
   weight: ['400']
 });
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading , setIsLoading] = useState(true);
   useEffect(() => {
     (
         async () => {
@@ -116,7 +116,7 @@ const Contact = () => {
 
         <div className={styles.letsconnect}>
 
-          <div className={styles.lets}>‎ Let's‎ ​</div>
+          <div className={styles.lets}>Let's​</div>
 
           <div id='text_1' className={styles.connect}>
 
