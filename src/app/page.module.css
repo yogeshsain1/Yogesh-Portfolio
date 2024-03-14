@@ -1,8 +1,13 @@
 .main {
     height: 100vh;
     background-color: #1D1D1D;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-
+#g{
+    width: 100vw;
+}
 .navvs{
     width: 100px;
     height: 100px;

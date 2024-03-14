@@ -26,14 +26,14 @@ function H2() {
 
         </section>
 
-        <div data-scroll data-scroll-speed="0.4" className={styles.abts}>
+        <div data-scroll data-scroll-speed="0.5" className={styles.abts}>
           <Image
             src="/images/ar1.png"
             alt="Description of your image"
             width={300}
             height={120}
           />
-          <g>
+          <g data-scroll data-scroll-speed="0.2" >
           <Image
             src="/images/ar2.png"
             alt="Description of your image"

@@ -64,16 +64,6 @@ function H0() {
 
     },[])
 
-
-
-
-
-
-
-
-
-
-
     useEffect(() => {
         (
             async () => {
@@ -106,9 +96,6 @@ function H0() {
 
 
 
-
-
-
     const animate = () => {
         if (xPercent < -100) {
             xPercent = 0;
@@ -118,35 +105,9 @@ function H0() {
         }
         gsap.set(firstText.current, { xPercent: xPercent })
         gsap.set(secondText.current, { xPercent: xPercent })
-        requestAnimationFrame(animate);
         xPercent += 0.02 * direction;
+        requestAnimationFrame(animate);
     }
-
-
-
-
-
-    useLayoutEffect(() => {
-        setTimeout(() => {
-
-            gsap.fromTo('#ved', {
-                opacity: 0,
-                y: -150
-            }, {
-
-
-                y: 0,
-                opacity: 1,
-                duration: 2.3,
-                ease: 'power4.out',
-
-            })
-        }, 2500)
-
-
-    }, [])
-
-
 
 
 

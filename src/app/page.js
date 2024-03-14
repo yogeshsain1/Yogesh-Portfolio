@@ -29,13 +29,14 @@ export default function Home() {
   return (
 
     <>
-      
+
       <ApNav />
       <main className={styles.main}>
-        <AnimatePresence mode='wait'>
-          {isLoading && <Preloader />}
-        </AnimatePresence>
-
+        <g>
+          <AnimatePresence mode='wait'>
+            {isLoading && <Preloader />}
+          </AnimatePresence>
+        </g>
 
         <div style={{ overflow: 'hidden' }}>
           <H0 />

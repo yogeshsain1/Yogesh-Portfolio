@@ -70,7 +70,7 @@ export default function Index() {
         },
         exit: {
             d: targetPath,
-            transition: {duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.5}
+            transition: {duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.3}
         }
     }
 
