@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,7 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <>
+    <Analytics/> 
       <Head>
         <link rel="shortcut icon" href="/images/ps.ico" />
         

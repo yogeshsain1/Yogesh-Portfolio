@@ -8,8 +8,10 @@ import H2 from "@/components/home1/home2/h2";
 import TXTS from "@/components/animations/app/page";
 import ApNav from "@/components/appearingnav";
 import H0 from "@/components/home1/home0";
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home() {
+  
   const [isLoading, setIsLoading] = useState(true);
   const [screenWidth, setScreenWidth] = useState(0);
 
