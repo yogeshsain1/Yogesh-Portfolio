@@ -1,47 +1,60 @@
-.slidingImages{
+.slidingImages {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  position: relative;
+  margin-top: 10px;
+  background-color: rgb(167, 163, 153);
+  z-index: 1;
+  height: 50vw;
+  .slider {
     display: flex;
-    flex-direction: column;
-    gap: 3vw;
     position: relative;
-    margin-top: 10px;
-    background-color: rgb(167, 163, 153);
-    z-index: 1;
-    height: 50vw;
-    .slider{
-        display: flex;
+    gap: 3vw;
+    width: 120vw;
+    left: -10vw;
+    .project {
+      width: 25%;
+      height: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .imageContainer {
         position: relative;
-        gap: 3vw;
-        width: 120vw;
-        left: -10vw;
-        .project{
-            width: 25%;
-            height: 20vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .imageContainer{
-                position: relative;
-                width: 85%;
-                height: 85%;
-                img{
-                    object-fit: cover;
-                }
-            }
+        width: 85%;
+        height: 85%;
+        img {
+          object-fit: cover;
         }
+      }
     }
-    .circleContainer{
-        background-color: red;
-        position: relative;
-        margin-top: 100px;
-        .circle{
-            height: 1550%;
-            width: 120%;
-            left: -10%;
-            border-radius: 0 0 50% 50%;
-            background-color: white;
-            z-index: 1;
-            position: absolute;
-            box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
-        }
+  }
+  .circleContainer {
+    background-color: red;
+    position: relative;
+    margin-top: 100px;
+    .circle {
+      height: 1550%;
+      width: 120%;
+      left: -10%;
+      border-radius: 0 0 50% 50%;
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
     }
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .slidingImages {
+    height: 90vw;
+    .slider {
+        width: 200vw;
+      .project {
+        height: 40vw;
+        width: 45vw;
+      }
+    }
+  }
 }
