@@ -100,7 +100,9 @@
       display: flex;
       flex-direction: column;
     }
-  
+    .designs{
+        transform: translateY(-30%);
+    }
     .section3{
        transform: translateY(20%);
     }
