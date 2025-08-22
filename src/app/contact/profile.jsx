@@ -16,7 +16,7 @@ function Profile() {
             y="45"
             width="150"
             height="150"
-            xlinkHref="profiles.jpeg"
+            href="/profiles.jpeg"
             clip-path="url(#circleClip)"
             preserveAspectRatio="xMidYMid slice"
           />

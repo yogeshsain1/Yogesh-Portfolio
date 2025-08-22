@@ -44,19 +44,26 @@ const oswald = Oswald({
 const Contact = () => {
   const [isLoading , setIsLoading] = useState(true);
   useEffect(() => {
-    (
-        async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll')).default
-            const locomotiveScroll = new LocomotiveScroll();
-
-            setTimeout(() => {
-                setIsLoading(false);
-                document.body.style.cursor = 'default'
-                window.scrollTo(0, 0);
-            }, 500)
-        }
-    )()
-}, [])
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      (async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        new LocomotiveScroll();
+        setTimeout(() => {
+          setIsLoading(false);
+          document.body.style.cursor = 'default';
+          window.scrollTo(0, 0);
+        }, 500);
+      })();
+    } else {
+      // Mobile: fallback, simpler animation, no LocomotiveScroll
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 500);
+    }
+  }, []);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
