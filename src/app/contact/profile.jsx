@@ -8,16 +8,17 @@ function Profile() {
         <svg viewBox="0 0 300 300" width="300" height="300">
           <defs>
             <clipPath id="circleClip">
-              <rect x="64.6152" y="44.6154" width="150.769" height="150.769" rx="75.3846" />
+              <circle cx="140" cy="120" r="75" />
             </clipPath>
           </defs>
           <image
-            x="64.6152"
-            y="44.6154"
-            width="150.769"
-            height="150.769"
-            xlinkHref="profiles.jpg"
-            clipPath="url(#circleClip)"
+            x="65"
+            y="45"
+            width="150"
+            height="150"
+            xlinkHref="profiles.jpeg"
+            clip-path="url(#circleClip)"
+            preserveAspectRatio="xMidYMid slice"
           />
         </svg>
 

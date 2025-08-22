@@ -127,7 +127,7 @@ function H0() {
                 <div className={styles.hellome}>
                     <h1 className={styles.itsme}>IT&apos;S ME,</h1>
                     <g data-scroll data-scroll-speed="0.4" className={raleway.className}>
-                        <p  className={styles.vedas}>VEDAS</p>
+                        <p  className={styles.vedas}>YOGESH</p>
                     </g>
                 </div>
 
